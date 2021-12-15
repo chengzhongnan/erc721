@@ -128,6 +128,7 @@ contract NFToken is
     uint256 _tokenId,
     bytes calldata _data
   )
+    virtual
     external
     override
   {
@@ -148,6 +149,7 @@ contract NFToken is
     address _to,
     uint256 _tokenId
   )
+    virtual
     external
     override
   {
@@ -169,6 +171,7 @@ contract NFToken is
     address _to,
     uint256 _tokenId
   )
+    virtual
     external
     override
     canTransfer(_tokenId)
@@ -427,7 +430,7 @@ contract NFToken is
     uint256 _tokenId,
     bytes memory _data
   )
-    private
+    internal
     canTransfer(_tokenId)
     validNFToken(_tokenId)
   {
